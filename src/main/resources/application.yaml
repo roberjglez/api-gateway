@@ -10,18 +10,11 @@ spring:
         - id: order-service
           uri: http://localhost:8081/
           predicates:
-            - Path=/orders/**
+            - Path=/api/orders/**
         - id: inventory-service
           uri: http://localhost:8082/
           predicates:
-            - Path=/inventory/**
-
-springdoc:
-  api-docs:
-    enabled: false
-  swagger-ui:
-    enabled: true
-    path: /swagger-ui.html
+            - Path=/api/inventory/**
 
 logging:
   level:
